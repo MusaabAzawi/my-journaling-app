@@ -4,15 +4,17 @@ import { API_KEY } from '$env/static/private';
 import type { PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async (event) => {
-    // const { journalID } = params;
-    // console.log('Journal ID:', journalID);
+    const journalID  = event.params.journalID;
+     console.log('Journal ID:', journalID);
     console.log(event);
 
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
 
- async function GET({url}) {
-    const prompt = url.searchParams.get('prompt') || 'Default journaling message prompt';
+ //async function GET({url}) {
+   // const prompt = url.searchParams.get('prompt') || 'Default journaling message prompt';
+     const prompt = "Generate a journaling message about ${journalID} in max two sentences";
+
     try {
         const result = await ai.models.generateContent({
             model: 'gemini-2.0-flash',
@@ -24,18 +26,16 @@ const ai = new GoogleGenAI({ apiKey: API_KEY });
             ]
         });
 
-        console.log('AI Response:', result);
         const text = result.candidates?.[0]?.content?.parts?.[0]?.text || 'No response';
-
-        console.log('AI Response Text:', text);
-
-        return json({ message: text });
+        console.log('AI Response:', result);
+        return { message: text
+        };
     } catch (error) {
         console.error('API Error:', error);
-        return json({ error: 'Failed to connect to AI service' }, { status: 500 });
+        throw error;
     }
 }
-    return {
-        message: "GET request received",
-    }
-}
+    // return {
+    //     message: "GET request received",
+    // }
+//}
