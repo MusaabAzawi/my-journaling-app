@@ -7,8 +7,19 @@
     {#if greeting}
         <p>{greeting}</p>
     {/if}
+    <h1>Journaling List</h1>
+    {#each data.journals as journal}
+        <div>
+            <a href={`/journal/${journalID.id}`}>
+                {journal.title}
+        </div>
+    {/each}
+    <ul>
+
+    </ul>
 </div>
-<script>
+<script lang="ts">
+    export let data;
     let name = '';
     let greeting = '';
 
