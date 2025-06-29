@@ -12,7 +12,7 @@
       </a>
       
       <div class="nav-links">
-        <a href="/" class="nav-link">
+        <a href="/journal" class="nav-link">
           📝 Journal
         </a>
         <a href="/about" class="nav-link">

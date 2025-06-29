@@ -19,6 +19,7 @@
     </ul>
 </div>
 <script lang="ts">
+    let date = new Date();
     export let data;
     let name = '';
     let greeting = '';
