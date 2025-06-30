@@ -10,14 +10,12 @@ Real-time Chat: Seamless conversation experience with AI
 
 🚀 Quick Start
 1. Clone and Install
-bashnpm install
+npm install
 2. Set up Environment
-Copy .env.example to .env and add your Google AI API key:
-bashcp .env.example .env
 Get your API key from Google AI Studio and add it to .env:
 API_KEY=your_google_ai_api_key_here
 3. Run the Demo
-bashnpm run dev
+npm run dev
 Open http://localhost:5173 in your browser.
 🎯 Demo Flow
 
@@ -45,8 +43,6 @@ In the journal conversation:
 Read the AI's initial reflection
 Ask follow-up questions in the input box
 Continue the conversation as long as you want
-
-
 
 🛠️ Technical Stack
 
