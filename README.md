@@ -1,38 +1,74 @@
-# sv
+AI-Powered Journaling App
+A SvelteKit application that provides AI-guided journaling experiences using Google's Gemini AI.
+✨ Features
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+AI-Guided Reflection: Get thoughtful prompts and insights on any topic
+Conversational Flow: Continue the conversation with follow-up questions
+Dynamic Topics: Create journals about anything on your mind
+Responsive Design: Works on desktop and mobile
+Real-time Chat: Seamless conversation experience with AI
 
-## Creating a project
+🚀 Quick Start
+1. Clone and Install
+bashnpm install
+2. Set up Environment
+Copy .env.example to .env and add your Google AI API key:
+bashcp .env.example .env
+Get your API key from Google AI Studio and add it to .env:
+API_KEY=your_google_ai_api_key_here
+3. Run the Demo
+bashnpm run dev
+Open http://localhost:5173 in your browser.
+🎯 Demo Flow
 
-If you're seeing this, you've probably already done this step. Congrats!
+Homepage: Choose quick-start topics or enter your name
+Create Journal: Enter a custom topic (e.g., "work stress")
+AI Conversation: Get initial AI reflection and ask follow-up questions
+Continue Chat: Build a meaningful conversation with the AI
 
-```bash
-# create a new project in the current directory
-npx sv create
+📱 How to Use
 
-# create a new project in my-app
-npx sv create my-app
-```
+Start at the homepage and either:
 
-## Developing
+Click a quick-start topic button
+Go to "Journal" to create a custom topic
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-```bash
-npm run dev
+On the journal creation page:
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+Enter what you want to reflect on
+Click "Start Journey"
 
-## Building
 
-To create a production version of your app:
+In the journal conversation:
 
-```bash
-npm run build
-```
+Read the AI's initial reflection
+Ask follow-up questions in the input box
+Continue the conversation as long as you want
 
-You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+🛠️ Technical Stack
+
+Frontend: SvelteKit 5 with TypeScript
+AI: Google Gemini 2.0 Flash
+Styling: Custom CSS with gradients and modern design
+State: In-memory session management
+Forms: SvelteKit enhanced forms for real-time updates
+
+📋 Current Status
+✅ Working Features:
+
+AI conversation flow
+Dynamic journal topics
+Responsive UI
+Follow-up questions
+Session management
+
+🚧 Future Enhancements:
+
+Database persistence
+User accounts
+Journal history
+Export functionality
+Advanced AI prompting
