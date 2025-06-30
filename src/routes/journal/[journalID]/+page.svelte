@@ -6,7 +6,7 @@
 
   async function createEntry() {
     if (!userInput) {
-      greeting = 'Please enter a journal topic';
+      greeting = 'follow up with a question (e.g. "What are your thoughts on this?")';
       return;
     }
   }

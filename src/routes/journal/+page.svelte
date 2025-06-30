@@ -35,7 +35,7 @@
 <h1>Journaling List </h1>
 
 <form method="post" on:submit|preventDefault={createEntry}>
-  <input 
+  <input class="entry" 
     type="text" 
     placeholder="Enter journal topic (e.g. 'work stress')" 
     bind:value={userInput}
@@ -47,6 +47,11 @@
 
 <p>{message}</p>
 <style>
+  h1 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
   .entry {
     margin-bottom: 1em;
   }
